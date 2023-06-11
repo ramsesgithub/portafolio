@@ -1,0 +1,357 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+    --open-sans:font-family: 'Open Sans', sans-serif;
+    --montserrat:font-family: 'Montserrat', sans-serif;
+    --fondo-clarito:#EAF2FD;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+section.menu{
+    margin: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 86px;
+    background-color: var(--cor-de-fundo);
+}
+
+.menu__header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu__header-nombre{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu__title{
+    font: 15px;
+}
+
+.menu__list{
+    display: none;
+}
+
+.menu__list__item__contato{
+
+}
+
+
+/*Sección Title*/
+
+section.title{
+    margin: 0 4%;
+    background: var(--cor-de-fundo);
+}
+
+.title__div{
+    display: flex;
+    flex-direction: column;
+}
+
+.title__profile{
+    width: 160px;
+    align-self: center;
+}
+
+.title__bio{
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.title__subsection{
+    font-family: var(--open-sans);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.title__network{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+/*Sección About*/
+
+section.about{
+    background-color: var(--fondo-clarito);
+    padding: 0.8rem 0;
+}
+
+.about__container{
+    margin: 0 4%;
+}
+
+.about__title{
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.about__paragraph{
+    font-family: var(--open-sans);
+    font-weight: 400;
+}
+
+.about__firma{
+    width: 100px;
+}
+
+
+
+/*Sección Skills*/
+
+section.skills{
+    background-color: var(--cor-de-fundo);
+    margin: 0 4%;
+}
+
+.skills__title{
+    text-align: center;
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.skills__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height:300px;
+    row-gap: 30px;
+}
+
+
+.skills__box-ul{
+    width: 156px;
+    height: 120px;
+    box-shadow: 1px 6px 15px #e0dfdf;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.skills__img{
+    text-align: center;
+}
+.skills__name{
+    font-family: var(--open-sans);
+    font-weight: 600;
+}
+
+
+/*Sección Hobbies*/
+
+section.hobbies{
+    margin: 0 4%;
+    background-color: var(--cor-de-fundo);
+}
+
+.hobbies__title{
+    text-align: center;
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.hobbies__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height:300px;
+    row-gap: 30px;
+}
+
+
+.hobbies__box-ul{
+    width: 156px;
+    height: 120px;
+    box-shadow: 1px 6px 15px #e0dfdf;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    row-gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hobbies__img-imagen{
+    width: 60px;
+    height: 50px;
+}
+
+.hobbies__name{
+    font-family: var(--open-sans);
+    font-weight: 600;
+}
+
+/* Experiencia Académica*/
+
+section.academic{
+    background-color: var(--fondo-clarito);
+    padding: 0.8rem 0;
+}
+
+.academic__container{ 
+    margin: 0 4%;
+}
+
+.academic__title{
+    text-align: center;
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+.academic__courses__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic__courses__list{
+    padding: 0;
+    margin: 0;
+}
+
+
+.academic__courses__item__img{
+    width: 300px;
+    height: 140px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.academic__courses__item__img img{
+    width: 150px;
+}
+
+.academic__courses__item__title{
+    font-family: var(--montserrat);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.academic__courses__item__subtitle{
+    font-family: var(--open-sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+
+
+/* experiencia*/
+
+section.experience{
+
+}
+
+/*Contacto*/
+
+section.formcontato{
+
+}
+
+/*footeer*/
+
+section.footer{
+    
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Desktop*/
+
+@media (max-width: 1024px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+/*Contacto*/
+
+/*Footer*/
+
+}
