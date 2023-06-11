@@ -296,8 +296,75 @@ section.academic{
 /* experiencia*/
 
 section.experience{
-
+    margin:0 4%;
 }
+
+.experience__section__title{
+    text-align: center;
+    font-family: var(--montserrat);
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.expreience__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.experiencie__box{
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem 0;
+}
+
+.experience__img{
+    width: 296px;
+    max-width: 700px;
+}
+
+
+.experience__title{
+    font-family: var(--montserrat);
+    font-weight: 600;
+}
+.experience__text{
+    font-family: var(--open-sans);
+    font-weight: 300;
+}
+
+
+.experience__description{
+    display: flex;
+    column-gap: 20px;
+}
+
+
+
+
+.experiencia__botao--repo{
+    width: 120px;
+    height: 45px;
+    border: 1px solid #000;
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.experience__botao--demo{
+    cursor: pointer;
+    width: 120px;
+    height: 45px;
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+}
+
 
 /*Contacto*/
 
