@@ -7,7 +7,7 @@ coloque nas sessões indicadas*/
 :root{
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-    --cor-de-fundo: #F5F5F5;
+    --cor-de-fundo: #eeeeee;
     --cor-de-link: #000;
     --open-sans:font-family: 'Open Sans', sans-serif;
     --montserrat:font-family: 'Montserrat', sans-serif;
@@ -16,7 +16,7 @@ coloque nas sessões indicadas*/
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
@@ -369,13 +369,126 @@ section.experience{
 /*Contacto*/
 
 section.formcontato{
+    background-color: var(--fondo-clarito);
+    padding: 1rem 0;
+}
+
+.formcontato__contacto{
+    margin: 0 4%;
+}
+
+.formcontato--esquerda{
+    display: none;
+}
+
+.formcontato__title{
+    text-align: center;
+    font-family: var(--montserrat);
+    font-weight: 700;
+}
+
+.formcontato__subtext{
+    font-family: var(--open-sans);
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.formcontato__form{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+
+.formcontato__input{
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: .3rem;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    outline: none;
+    font-family: var(--montserrat);
+    transition: .3s all ease;
 
 }
+
+
+.formcontato__input:focus{
+    transition: .3s all ease;
+    border: none;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+    box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+    padding: .3rem;
+}
+
+
+.formcontato__input::placeholder{
+    padding: .5rem;
+}
+
+
+.formcontato__textarea{
+    width: 300px;
+    border-radius: .3rem;
+    border: none;
+    resize: none;
+    height: 120px;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
+    font-size: 1rem;
+    padding: .5rem;
+    outline: none;
+    transition: .3s all ease;
+
+}
+
+
+.formcontato__textarea:focus{
+    transition: .3s all ease;
+    padding: .5rem;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+    box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
+}
+
+.formcontato__textarea::placeholder{
+    font-family: var(--montserrat);
+    padding: .5rem;
+}
+
+
+.formcontato__botao{
+    width: 140px;
+    height: 45px;
+    background-color: #111;
+    border: none;
+    color: var(--cor-de-fundo);
+    font-family: var(--montserrat);
+    font-size: .9rem;
+    margin: .8rem 0;
+}
+
+
+
+
 
 /*footeer*/
 
 section.footer{
-    
+    margin: 0 4%;
+    background-color: var(--cor-de-fundo);
+    height: 70px;
+}
+
+.footer__rodape{
+    text-align: center;
+    font-family: var(--open-sans);
+    font-size: 1.1rem;
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
