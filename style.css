@@ -496,25 +496,54 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
-/* Menú */
+    /* Menú */
 
-/*title*/
+    /*title*/
+    .title{
+        height: 190px;
+    }
+    .title__div{
+        flex-direction: row-reverse;
+        gap: 16px;
+    }
 
-/*Skills*/
 
-/*Hobbies*/
+    /*Skills*/
+    section.skills{
+        height: 400px;
+    }
+    .skills__line{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .skills__box-ul{
+        width: 230px;
+    }
 
-/*Formación Académica*/
 
-/*Experiencia Profesional*/
+    /*Hobbies*/
+    section.hobbies{
+        height: 400px;
+    }
+    .hobbies__line{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hobbies__box-ul{
+        width: 230px;
+    }
+
+    /*Formación Académica*/
+
+    /*Experiencia Profesional*/
 
 }
 
 /*Desktop*/
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 
 /*Menu*/
 
