@@ -648,9 +648,33 @@ Utiliza las referencias de los breakpoints @media abajo */
         width: 250px;
     }
     /*Experiencia Profesional*/
-
+    section.experience{
+        height: 1300px;
+        padding: 0;
+    }
+    .expreience__container{
+        display: grid;
+    }
+    .experiencie__box{
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        width: auto;
+    }
+    .experiencie__box:nth-child(2){
+        flex-direction: row-reverse;
+    }
     /*Contacto*/
-
+    .formcontato__contacto{
+        display: flex;
+        gap: 25px;
+        height: 800px;
+        align-items: center;
+        justify-content: center;
+    }
+    .formcontato--esquerda{
+        display: flex;
+    }
     /*Footer*/
 
 }
