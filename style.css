@@ -73,9 +73,6 @@ section.menu{
     display: none;
 }
 
-.menu__list__item__contato{
-
-}
 
 
 /*Sección Title*/
@@ -238,7 +235,6 @@ section.hobbies{
 
 section.academic{
     background-color: var(--fondo-clarito);
-    padding: 0.8rem 0;
 }
 
 .academic__container{ 
@@ -562,23 +558,99 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Desktop*/
 
 @media (min-width: 1024px) {
+    section{
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+    /*Menu*/
+    .menu__list__item__contato{
+        display: none;
+    }
+    .menu__list{
+        display: flex;
+        gap: 20px;
+    }
 
-/*Menu*/
+    /*Titulo*/
+    .title{
+        height: 280px;
+    }
+    .title__bio{
+        font-size: 2.6rem;
+    }
+    .title__profile{
+        width: 300px;
+        height: 250px;
+    }
 
-/*Titulo*/
+    /*Sección sobre mi*/
+    .about__title{
+        font-size: 1.6rem;
+    }
+    .about__container{
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
 
-/*Sección sobre mi*/
+    /*Skills*/
+    section.skills{
+        margin: 0;
+    }
+    .skills__title{
+        font-size: 1.6rem;
+    }
+    .skills__line{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .skills__box-ul{
+        width: 180px;
+        height: 180px;
+    }
 
-/*Skills*/
+    /*Hobbies*/
+    section.hobies{
+        margin: 0;
+    }
+    .hobbies__title{
+        font-size: 1.6rem;
+    }
+    .hobbies__line{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    .hobbies__box-ul{
+        width: 180px;
+        height: 180px;
+    }
 
-/*Hobbies*/
+    /*Formación Académica*/
+    section.acedemic{
+        height: 550px;
+    }
+    .academic__title{
+        font-size: 1.6rem;
+    }
+    .acedemic__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 550px;
+    }
+    .academic__courses{
+        gap: 15px;
+    }
+    .academic__courses__item__img{
+        width: 330px;
+        height: 290px;
+    }
+    .academic__courses__item__img img {
+        width: 250px;
+    }
+    /*Experiencia Profesional*/
 
-/*Formación Académica*/
+    /*Contacto*/
 
-/*Experiencia Profesional*/
-
-/*Contacto*/
-
-/*Footer*/
+    /*Footer*/
 
 }
