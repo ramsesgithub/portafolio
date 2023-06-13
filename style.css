@@ -459,6 +459,7 @@ section.formcontato{
 
 
 .formcontato__botao{
+    cursor: pointer;
     width: 140px;
     height: 45px;
     background-color: #111;
