@@ -3,13 +3,16 @@ const form = document.querySelector(".formcontato__form");
 const inputName = document.getElementById("form__name");
 const inputEmail = document.getElementById("form__email");
 const inputAsunto = document.getElementById("form__asunto");
-const textarea = document.getElementById("mensagem");
+const textarea = document.getElementById("message");
 const btnEnviar = document.getElementById("form__boton");
 
 let res = document.createElement("div");
 
 form.addEventListener("input",e=>{
-    if(inputName.value.length > 0 && inputEmail.value.length > 0 && inputAsunto.value.length > 0 && textarea.value.length > 0){
+    let value = inputName.value.length > 0 && inputEmail.value.length > 0 && inputAsunto.value.length > 0 && textarea.value.length > 0;
+    let limitCharacters = inputName.value.length < 50 && inputAsunto.value.length < 50 && textarea.value.length < 300;
+    let emailValid = inputEmail.value.indexOf("@")!==-1 && inputEmail.value.indexOf(".")!==-1;
+    if(value && limitCharacters && emailValid){
         btnEnviar.disabled = false;
         btnEnviar.style.cursor = "pointer";
     }else{
@@ -17,6 +20,42 @@ form.addEventListener("input",e=>{
         btnEnviar.style.removeProperty("cursor");
     }
 });
+
+
+
+
+/* Email JS */
+
+document.querySelector('.formcontato__form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    btnEnviar.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_81v0kum';
+
+    emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+        btnEnviar.value = 'Send Email';
+        /* Sweealert */
+        Swal.fire({
+            position: 'top-mid',
+            icon: 'success',
+            title: 'Mensaje enviado correctamente',
+            showConfirmButton: false,
+            timer: 2500
+        });
+    }, (err) => {
+        btnEnviar.value = 'Send Email';
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Hubo un error, Verificar el mensaje',
+            timer: 2500
+        });
+    });
+});
+
+
 
 
 // inputName.addEventListener("keyup",e=>{
