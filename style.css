@@ -341,6 +341,7 @@ section.experience{
 
 
 .experiencia__botao--repo{
+    cursor: pointer;
     width: 120px;
     height: 45px;
     border: 1px solid #000;
