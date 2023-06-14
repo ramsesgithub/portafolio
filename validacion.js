@@ -6,28 +6,31 @@ const inputAsunto = document.getElementById("form__asunto");
 const textarea = document.getElementById("mensagem");
 const btnEnviar = document.getElementById("form__boton");
 
-
 let res = document.createElement("div");
 
-inputName.addEventListener("keyup",e=>{
-    if(e.currentTarget.value === ""){
-        btnEnviar.disabled = true;
-    }else{
+form.addEventListener("input",e=>{
+    if(inputName.value.length > 0 && inputEmail.value.length > 0 && inputAsunto.value.length > 0 && textarea.value.length > 0){
         btnEnviar.disabled = false;
         btnEnviar.style.cursor = "pointer";
+    }else{
+        btnEnviar.disabled = true;
+        btnEnviar.style.removeProperty("cursor");
     }
 });
 
-inputEmail.addEventListener("keyup",e=>{
-    if(e.currentTarget.value === "" && (inputEmail.value.indexOf("@")==-1 && inputEmail.value.indexOf(".")==-1) ){
-        btnEnviar.disabled = true;
-        res.innerHTML = `<p class="formcontato__resultado"> EMAIL DEBE CONTENER "@" y "." ❌ <p>`;
-        return form.append(res)
-    }else{
-        btnEnviar.disabled = false;
-        btnEnviar.style.cursor = "pointer";
-    }
-});
+
+// inputName.addEventListener("keyup",e=>{
+//     let value =e.currentTarget.value
+//     if(value === "" || value.length > 50){
+//         btnEnviar.disabled = true;
+//         btnEnviar.style.cursor = "unset";
+//     }else{
+//         btnEnviar.disabled = false;
+//         btnEnviar.style.cursor = "pointer";
+//     }
+// });
+
+
 
 
 // form.addEventListener("submit", e =>{
