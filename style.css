@@ -9,8 +9,8 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     --cor-de-fundo: #eeeeee;
     --cor-de-link: #000;
-    --open-sans:font-family: 'Open Sans', sans-serif;
-    --montserrat:font-family: 'Montserrat', sans-serif;
+    --open-sans:'Open Sans', sans-serif;
+    --montserrat:'Montserrat', sans-serif;
     --fondo-clarito:#EAF2FD;
 }
 
@@ -273,6 +273,12 @@ section.academic{
 
 .academic__courses__item__img img{
     width: 150px;
+    transition: all .2s ease-in-out;
+}
+
+.academic__courses__item__img img:hover{
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
 }
 
 .academic__courses__item__title{
@@ -394,7 +400,6 @@ section.formcontato{
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     row-gap: 24px;
 }
 
@@ -408,19 +413,10 @@ section.formcontato{
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
     outline: none;
     font-family: var(--montserrat);
-    transition: .3s all ease;
-
 }
 
 
-.formcontato__input:focus{
-    transition: .3s all ease;
-    border: none;
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-    box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-    padding: .3rem;
-}
+
 
 
 .formcontato__input::placeholder{
@@ -440,18 +436,8 @@ section.formcontato{
     font-size: 1rem;
     padding: .5rem;
     outline: none;
-    transition: .3s all ease;
-
 }
 
-
-.formcontato__textarea:focus{
-    transition: .3s all ease;
-    padding: .5rem;
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-    box-shadow: 0px 10px 5px 0px rgba(161,192,247,1);
-}
 
 .formcontato__textarea::placeholder{
     font-family: var(--montserrat);
@@ -470,7 +456,26 @@ section.formcontato{
     margin: .8rem 0;
 }
 
+.formcontato__form__container--invalid input {
+    border: 2px solid #cf0808;
+    border-radius: 5px;
+}
 
+.formcontato__form__container--invalid textarea{
+    border: 2px solid #c70707;
+    border-radius: 5px;
+}
+
+.formcontato__input--error{
+    display: none;
+}
+
+.formcontato__form__container--invalid .formcontato__input--error {
+    display: block;
+    margin-top: 12px;
+    font-family: var(--montserrat);
+    color: #fc0b0b;
+}
 
 
 

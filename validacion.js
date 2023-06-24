@@ -58,57 +58,47 @@ document.querySelector('.formcontato__form').addEventListener('submit', function
 
 
 
-// inputName.addEventListener("keyup",e=>{
-//     let value =e.currentTarget.value
-//     if(value === "" || value.length > 50){
-//         btnEnviar.disabled = true;
-//         btnEnviar.style.cursor = "unset";
-//     }else{
-//         btnEnviar.disabled = false;
-//         btnEnviar.style.cursor = "pointer";
-//     }
-// });
+const valida = input =>{
+    const tipoDeInput = input.dataset.tipo;
+    //validar si en campo es valido y mostrar mennsaje
+    if(input.validity.valid){
+        input.parentElement.classList.remove("formcontato__form__container--invalid");
+        input.parentElement.querySelector(".formcontato__input--error").innerHTML="";
+    }else{
+        input.parentElement.classList.add("formcontato__form__container--invalid");
+        input.parentElement.querySelector(".formcontato__input--error").innerHTML = mostrarMensajeDeError(tipoDeInput, input);
+    }
+}
 
+const tipoDeErrores = [
+    "valueMissing",
+    "typeMismatch",
+    "patternMismatch",
+    "customError"
+];
 
+const mensajesDeError = {
+    nombre:{valueMissing: "El campo nombre no puede estar vacio",patternMismatch:"El nombre debe contener 3 a 50 caracteres"},
+    email:{valueMissing: "El campo email no puede estar vacio",typeMismatch:"El correo no es valido"},
+    asunto:{valueMissing:"El campo asunto no puede estar vacio",patternMismatch:"El asunto debe contener 3 a 30 caracteres"},
+    mensaje:{valueMissing:"El campo estado no puede estar vacio",patternMismatch:"El mensaje debe contener 10 a 300 caracteres"},
+}
 
+const mostrarMensajeDeError = (tipoDeInput, input) => {
+    let mensaje = "";
+    tipoDeErrores.forEach(error =>{
+        if(input.validity[error]){
+            mensaje = mensajesDeError[tipoDeInput][error];
+        }
+    });
+    return mensaje;
+}
 
-// form.addEventListener("submit", e =>{
-//     e.preventDefault();
-//     res.innerHTML="";
-//     /* validaciones name */
-//     if(inputName.value === null || inputName.value === ""){
-//         res.innerHTML = `<p class="formcontato__resultado">EL NOMBRE NO PUEDE ESTAR VACIO ❌ <p>`;
-//         return form.append(res);
-//     }
-//     else if(inputName.value.length > 10){
-//         res.innerHTML = `<p class="formcontato__resultado">EL NOMBRE DEBE CONTENER MAS DE 50 CARACTERES ❌ <p>`;
-//         return form.append(res);
-//     }
-//     /* validaciones email */
-//     else if(inputEmail.value == null || inputEmail.value === ""){
-//         res.innerHTML = `<p class="formcontato__resultado">EL EMAIL NO PUEDE ESTAR VACIO ❌ <p>`;
-//         return form.append(res);
-//     }
-//     else if(inputEmail.value.indexOf("@")==-1 && inputEmail.value.indexOf(".")==-1){
-//         res.innerHTML = `<p class="formcontato__resultado"> EMAIL DEBE CONTENER "@" y "." ❌ <p>`;
-//         return form.append(res);
-//     }
-//     /* validaciones asunto */
-//     else if(inputAsunto.value === null || inputAsunto.value === ""){
-//         res.innerHTML = `<p class="formcontato__resultado">EL ASUNTO NO PUEDE ESTAR VACIO ❌ <p>`;
-//         return form.append(res);
-//     }
-//     else if(inputAsunto.value.length > 50){
-//         res.innerHTML = `<p class="formcontato__resultado">EL ASUNTO DEBE CONTENER MAS DE 50 CARACTERES❌ <p>`;
-//         return form.append(res);
-//     }
-//     /* validaciones mensaje */
-//     else if(textarea.value === null || textarea.value === ""){
-//         res.innerHTML = `<p class="formcontato__resultado">EL MENSAJE NO PUEDE ESTAR VACIO ❌ <p>`;
-//         return form.append(res);
-//     }
-//     else if(textarea.value.length > 30){
-//         res.innerHTML = `<p class="formcontato__resultado">EL ASUNTO DEBE CONTENER MAS DE 300 CARACTERES❌ <p>`;
-//         return form.append(res);
-//     }
-// })
+const inputs = document.querySelectorAll(".input");
+
+inputs.forEach(input => {
+    input.addEventListener("blur", (input) => {
+        valida(input.target);
+    })
+})
+
