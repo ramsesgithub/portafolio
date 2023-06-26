@@ -78,9 +78,9 @@ const tipoDeErrores = [
 ];
 
 const mensajesDeError = {
-    nombre:{valueMissing: "El campo nombre no puede estar vacio",patternMismatch:"El nombre debe contener 3 a 50 caracteres"},
-    email:{valueMissing: "El campo email no puede estar vacio",typeMismatch:"El correo no es valido"},
-    asunto:{valueMissing:"El campo asunto no puede estar vacio",patternMismatch:"El asunto debe contener 3 a 30 caracteres"},
+    nombre:{valueMissing: "El campo nombre no puede estar vacio",patternMismatch:"El nombre debe contener 2 a 50 letras"},
+    email:{valueMissing: "El campo email no puede estar vacio",typeMismatch:"El correo no es valido, Ejemplo: pedro@gmail.com"},
+    asunto:{valueMissing:"El campo asunto no puede estar vacio",patternMismatch:"El asunto debe contener 3 a 30 letras"},
     mensaje:{valueMissing:"El campo estado no puede estar vacio",patternMismatch:"El mensaje debe contener 10 a 300 caracteres"},
 }
 

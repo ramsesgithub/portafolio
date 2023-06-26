@@ -107,14 +107,34 @@ section.title{
 }
 
 .title__network{
+    align-items: center;
     display: flex;
     justify-content: space-around;
     padding: 0;
 }
 
+.title__network__item:last-child{
+    font-family: var(--montserrat);
+    border: #000 solid;
+    border-radius: 50px;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.title__network__item:last-child:hover a{
+    color: #fff;
+}
+
+.title__network__item:last-child:hover{
+    transition: all .2s ease-in-out;
+    background-color: #000;
+    transform: scale(1.1);
+}
+
 /*Sección About*/
 
 section.about{
+    margin-top: 30px;
     background-color: var(--fondo-clarito);
     padding: 0.8rem 0;
 }
@@ -129,9 +149,10 @@ section.about{
     font-size: 1.4rem;
 }
 
+
 .about__paragraph{
     font-family: var(--open-sans);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .about__firma{
@@ -579,6 +600,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         display: none;
     }
     .menu__list{
+        width: 100%;
         display: flex;
         gap: 20px;
     }
