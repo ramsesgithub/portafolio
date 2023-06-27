@@ -9,12 +9,14 @@
     <!-- Font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- Referencia de la hoja de estilo de Css -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title> Mi Portafolio</title>
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon">
+    <title>Portafolio | Ramses Quinteros</title>
     <!-- Email JS -->
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -30,19 +32,17 @@
             <header class="menu__header">
                 <div class="menu__header-nombre">
                     <img src="assets\vector.png">
-                    <h3 class="menu__title">Ramsés Quinteros</h3>
+                    <h3 class="menu__title"><strong>Ramsés</strong></h3>
                 </div>
             </header>
             <nav class="navegacion__informacion">
                 <ul class="menu__list">
-                    <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
+                    <li class="menu__list__item"><a href="#sobre-mi"><strong>Sobre mi</strong></a></li>
                     <li class="menu__list__item"><a href="#skills">Skills</a></li>
                     <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
                     <li class="menu__list__item"><a href="#formacion">Formación</a></li>
                     <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
-                    <li class="menu__list__item"><a href="#contacto">quinterosramses@gmail.com</a></li>
                 </ul>
-                <li class="menu__list__item__contato"><a href="#contacto">quinterosramses@gmail.com</a></li>
             </nav>
         </section>
         <!-- Sección del Header/Title/Hero -->
@@ -50,13 +50,12 @@
             <div class="title__div">
                 <img class="title__profile" src="assets/image.png">
                 <div class="title__container">
-                    <h2 class="title__bio">Hola, mi nombre es Ramsés Quinteros y soy desarrollador web</h2>
-                    <h3 class="title__subsection">Soy estudiante aprendiendo en Front End  y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
+                    <h2 class="title__bio">Hola, mi nombre es <strong>Ramsés Quinteros</strong> Fronted Develover</h2>
+                    <a class="title__CV" href="./assets/CurriculumRamsesQuinteros.html" target="_blank">Ver mi CV </a>
                     <ul class="title__network">
                         <!-- Pon los enlaces de tus redes sociales favoritas -->
                         <li class="title__network__item"><a href="https://github.com/ramsesgithub" target="_blank"><img src="./assets/GitHub.svg" alt=""></a></li>                   </li>
                         <li class="title__network__item"><a href="https://www.linkedin.com/in/ramses-quinteros/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a></li>                   </li>
-                        <li class="title__network__item"><a href="./assets/CurriculumRamsesQuinteros.html" target="_blank">Descargar mi CV </a></li>
                     </ul>
                 </div>
             </div>
@@ -65,9 +64,8 @@
         <section class="about" id="sobre-mi">
             <div class="about__container">
                 <h3 class="about__title">Sobre mi</h3>
-                <h4 class="about__title">Desarrollador Front End</h4>
-                <p class="about__paragraph">Mi nombre es Ramses Quinteros, tengo 19 años. Soy de Argentina, Buenos Aires. Empecé en la programación en el 2022 de forma autodidacta. Tengo conocimientos en <strong>front-end</strong>, desarrollados a través de videos, cursos y creando proyectos propios.</p>
-                <p class="about__paragraph">Busco desarrollar mi carrera y crecer personalmente, ayudando o recibiendo ayuda, contribuyendo con mis habilidades en <strong>HTML, CSS, JAVASCRIPT y REACT JS</strong> para logar satisfacer las necesidades y preferencias de los cliente</p>
+                <p class="about__paragraph">Tengo 19 años. Soy de Argentina, Buenos Aires. Empecé en la programación en el 2022 de forma autodidacta. Cuento con conocimientos en front-end, desarrollados a través de videos, cursos y creando proyectos propios.</p>
+                <p class="about__paragraph">Busco desarrollar mi carrera y crecer personalmente, ayudando o recibiendo ayuda, contribuyendo con mis habilidades en HTML, CSS, JAVASCRIPT y REACT JS para logar satisfacer las necesidades y preferencias de los cliente</p>
                 <p class="about__paragraph">Me encantaría poder entrar a formar parte de una empresa en la que poder aplicar todos mis conocimientos y, al mismo tiempo, que me permita desarrollarme profesionalmente.</p>
                 <p class="about__paragraph">Tengo la capacidad de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto, al mismo tiempo puedo trabajar en equipo y tener compañerismo</p>
             </div>
@@ -98,6 +96,12 @@
                         <ul class="skills__box-ul">
                             <li class="skills__img"> <img src="assets/react.png" alt=""> </li>
                             <li class="skills__name">React</li>
+                        </ul>
+                    </div>
+                    <div class="skills__box">
+                        <ul class="skills__box-ul">
+                            <li class="skills__img"> <img src="assets/git.svg" alt=""> </li>
+                            <li class="skills__name">Git</li>
                         </ul>
                     </div>
             </div>
@@ -173,7 +177,7 @@
                     <img class="experience__img" src="assets/reto.png">
                     <div class="experience__info">
                         <h2 class="experience__title">Pagina web Gym</h2>
-                        <h3 class="experience__text">Proyecto Coderhouse</h3>
+                        <h3 class="experience__text">Proyecto front-end</h3>
                             <div class="experience__description">
                                 <!-- Pon el enlace del proyecto en Github o GithubPages -->
                                     <span class="experience__repo"><a href="https://github.com/ramsesgithub/reto-power-gym" target="_blank" class="experience__repo-ancla"><button class="experiencia__botao--repo">Repositório</button></a></span>
@@ -199,7 +203,7 @@
                     <img class="experience__img" src="assets/portafolio.png">
                     <div class="experience__info">
                         <h2 class="experience__title">Ecommerce</h2>
-                        <h3 class="experience__text">Practica</h3>
+                        <h3 class="experience__text">Proyecto personal</h3>
                             <div class="experience__description">
                                 <!-- Pon el enlace del proyecto en Github o GithubPages -->
                                     <span class="experience__repo"><a href="https://github.com/ramsesgithub/Ecommerce" target="_blank"><button class="experiencia__botao--repo">Repositório</button></a></span>
@@ -213,33 +217,26 @@
         <!-- Sección de Contacto -->
         <section class="formcontato" id="contacto">
             <div class="formcontato__contacto">
-                <div class="formcontato--esquerda">
-                    <img class="formcontato__img" src="assets/contacto.jpg">
-                </div>
-                <div class="formcontato__text">
-                    <h2 class="formcontato__title">Contacto</h2>
-                    <h3 class="formcontato__subtext">¿Quieres contactarme o hablar conmigo?</h3>
-                    <h3 class="formcontato__subtext">Completa el siguiente formulario y nos pondremos en contacto :) </h3>
-                    <form class="formcontato__form" name="form">
-                        <div class="">
-                            <input class="formcontato__input input" id="form__name" type="text" name="from_name" placeholder="Nombre" required data-tipo="nombre" pattern="^[a-zA-Z\s]{2,50}">
-                            <span class="formcontato__input--error">Este campo no es valido</span>
-                        </div>
-                        <div class="">
-                            <input class="formcontato__input input" id="form__email" type="email" name="email_id" placeholder="E-mail" required data-tipo="email">
-                            <span class="formcontato__input--error">Este campo no es valido</span>
-                        </div>
-                        <div class="">
-                            <input class="formcontato__input input" id="form__asunto" type="text" name="asunto" placeholder="Asunto" required data-tipo="asunto" pattern="^[a-zA-Z\s]{3,30}">
-                            <span class="formcontato__input--error">Este campo no es valido</span>
-                        </div>
-                        <div class="">
-                            <textarea class="formcontato__textarea input" id="message" name="message" placeholder="Mensaje" required data-tipo="mensaje"></textarea>
-                            <span class="formcontato__input--error">Este campo no es valido</span>
-                        </div>
-                        <button  type="submit" class="formcontato__botao" id="form__boton" disabled >Enviar mensaje</button>
-                    </form>
-                </div>
+                <h2 class="formcontato__title">Contacto</h2>
+                <form class="formcontato__form" name="form">
+                    <div>
+                        <input class="formcontato__input input" id="form__name" type="text" name="from_name" placeholder="Nombre" required data-tipo="nombre" pattern="^[a-zA-Z\s]{2,50}">
+                        <span class="formcontato__input--error">Este campo no es valido</span>
+                    </div>
+                    <div>
+                        <input class="formcontato__input input" id="form__email" type="email" name="email_id" placeholder="E-mail" required data-tipo="email">
+                        <span class="formcontato__input--error">Este campo no es valido</span>
+                    </div>
+                    <div>
+                        <input class="formcontato__input input" id="form__asunto" type="text" name="asunto" placeholder="Asunto" required data-tipo="asunto" pattern="^[a-zA-Z\s]{3,30}">
+                        <span class="formcontato__input--error">Este campo no es valido</span>
+                    </div>
+                    <div>
+                        <textarea class="formcontato__textarea input" id="message" name="message" placeholder="Mensaje" required data-tipo="mensaje"></textarea>
+                        <span class="formcontato__input--error">Este campo no es valido</span>
+                    </div>
+                    <button  type="submit" class="formcontato__botao" id="form__boton" disabled >Enviar mensaje</button>
+                </form>
             </div>
         </section>
         <!-- Sección de Footer -->

@@ -9,9 +9,10 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
     --cor-de-fundo: #eeeeee;
     --cor-de-link: #000;
-    --open-sans:'Open Sans', sans-serif;
+    --open-sans:'Roboto', sans-serif;
     --montserrat:'Montserrat', sans-serif;
     --fondo-clarito:#EAF2FD;
+    --color-azul:#3472c9;
 }
 
 body {
@@ -28,6 +29,10 @@ ol, ul,li {
 a{
     text-decoration: none;
     color: var(--cor-de-link);
+}
+
+strong{
+    color: var(--color-azul);
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -54,6 +59,7 @@ section.menu{
 }
 
 .menu__header{
+    margin: 0 2%;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -92,7 +98,14 @@ section.title{
     align-self: center;
 }
 
+.title__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title__bio{
+    text-align: center;
     font-family: var(--montserrat);
     font-weight: 700;
     font-size: 1.4rem;
@@ -107,13 +120,26 @@ section.title{
 }
 
 .title__network{
+    gap: 10px;
     align-items: center;
     display: flex;
     justify-content: space-around;
     padding: 0;
 }
 
-.title__network__item:last-child{
+
+.title__CV:hover{
+    color: #fff;
+}
+
+.title__CV:hover{
+    transition: all .2s ease-in-out;
+    background-color: #000;
+    transform: scale(1.1);
+}
+
+.title__CV{
+    text-align: center;
     font-family: var(--montserrat);
     border: #000 solid;
     border-radius: 50px;
@@ -121,21 +147,10 @@ section.title{
     transition: all .2s ease-in-out;
 }
 
-.title__network__item:last-child:hover a{
-    color: #fff;
-}
-
-.title__network__item:last-child:hover{
-    transition: all .2s ease-in-out;
-    background-color: #000;
-    transform: scale(1.1);
-}
-
 /*Sección About*/
 
 section.about{
     margin-top: 30px;
-    background-color: var(--fondo-clarito);
     padding: 0.8rem 0;
 }
 
@@ -144,15 +159,26 @@ section.about{
 }
 
 .about__title{
-    font-family: var(--montserrat);
+    font-family: var(--open-sans);
     font-weight: 700;
     font-size: 1.4rem;
+    text-align: center;
+    color: var(--color-azul);
+    position: relative;
 }
 
+.about__title::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-azul);
+}
 
 .about__paragraph{
     font-family: var(--open-sans);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .about__firma{
@@ -173,14 +199,25 @@ section.skills{
     font-family: var(--montserrat);
     font-size: 1.4rem;
     font-weight: 700;
+    color: var(--color-azul);
+    position: relative;
+}
+
+.skills__title::before{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-azul);
 }
 
 .skills__line{
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height:300px;
-    row-gap: 30px;
+    justify-content: space-evenly;
+    height: 550px;
 }
 
 
@@ -218,6 +255,18 @@ section.hobbies{
     font-family: var(--montserrat);
     font-size: 1.4rem;
     font-weight: 700;
+    position: relative;
+    color: var(--color-azul);
+}
+
+
+.hobbies__title::before{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    width: 109px;
+    height: 3px;
+    background-color: var(--color-azul);
 }
 
 .hobbies__line{
@@ -254,9 +303,6 @@ section.hobbies{
 
 /* Experiencia Académica*/
 
-section.academic{
-    background-color: var(--fondo-clarito);
-}
 
 .academic__container{ 
     margin: 0 4%;
@@ -267,8 +313,19 @@ section.academic{
     font-family: var(--montserrat);
     font-size: 1.4rem;
     font-weight: 700;
+    color: var(--color-azul);
+    position: relative;
+    margin-bottom: 3rem;
 }
 
+.academic__title::before{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    width: 250px;
+    height: 3px;
+    background-color: var(--color-azul);
+}
 
 .academic__courses__box{
     display: flex;
@@ -328,6 +385,17 @@ section.experience{
     font-size: 1.4rem;
     font-weight: 700;
     padding: 1rem 0;
+    position: relative;
+    color: var(--color-azul);
+}
+
+.experience__section__title::before{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    width: 260px;
+    height: 3px;
+    background-color: var(--color-azul);
 }
 
 .expreience__container{
@@ -352,6 +420,7 @@ section.experience{
 .experience__title{
     font-family: var(--montserrat);
     font-weight: 600;
+    color: var(--color-azul);
 }
 .experience__text{
     font-family: var(--open-sans);
@@ -384,21 +453,24 @@ section.experience{
     font-family: var(--montserrat);
     font-size: 1rem;
     font-weight: 700;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     color: #fff;
-    background-color: #000;
+    background-color: var(--color-azul);
 }
 
 
 /*Contacto*/
 
 section.formcontato{
-    background-color: var(--fondo-clarito);
     padding: 1rem 0;
 }
 
+
 .formcontato__contacto{
     margin: 0 4%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .formcontato--esquerda{
@@ -406,10 +478,23 @@ section.formcontato{
 }
 
 .formcontato__title{
+    margin-bottom: 50px;
+    color: var(--color-azul);
     text-align: center;
     font-family: var(--montserrat);
     font-weight: 700;
+    position: relative;
 }
+
+.formcontato__title::before{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 112px;
+    height: 3px;
+    background-color: var(--color-azul);
+}
+
 
 .formcontato__subtext{
     font-family: var(--open-sans);
@@ -418,13 +503,14 @@ section.formcontato{
 }
 
 .formcontato__form{
-    padding: 2rem 0;
+    width: 90%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    row-gap: 24px;
 }
 
 .formcontato__input{
+    margin-bottom: 20px;
     width: 100%;
     height: 60px;
     border: none;
@@ -455,7 +541,6 @@ section.formcontato{
     -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
     box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.26);
     font-size: 1rem;
-    padding: .5rem;
     outline: none;
 }
 
@@ -467,14 +552,16 @@ section.formcontato{
 
 
 .formcontato__botao{
-    width: 140px;
+    width: auto;
     height: 45px;
-    background-color: #111;
+    background-color: var(--color-azul);
     border: none;
-    color: var(--cor-de-fundo);
+    color: #000;
+    font-weight: bold;
     font-family: var(--montserrat);
     font-size: .9rem;
     margin: .8rem 0;
+    padding: 0;
 }
 
 .formcontato__form__container--invalid input {
@@ -493,7 +580,7 @@ section.formcontato{
 
 .formcontato__form__container--invalid .formcontato__input--error {
     display: block;
-    margin-top: 12px;
+    margin-bottom: 12px;
     font-family: var(--montserrat);
     color: #fc0b0b;
 }
@@ -533,16 +620,16 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
     .title__div{
         flex-direction: row-reverse;
-        gap: 16px;
+        gap: 25px;
     }
 
     /*Skills*/
     section.skills{
-        height: 400px;
+        height: 600px;
     }
     .skills__line{
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .skills__box-ul{
         width: 230px;
@@ -585,7 +672,9 @@ Utiliza las referencias de los breakpoints @media abajo */
         width: 100%;
     }
     /* Contacto */
-    
+    .formcontato__form{
+        width: 80%;
+    }
 }
 
 /*Desktop*/
@@ -606,13 +695,18 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
 
     /*Titulo*/
-    .title__container{animation:scale-up-horizontal-center 0.7s} @keyframes scale-up-horizontal-center{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}}
+    .title__container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        animation:scale-up-horizontal-center 0.7s} @keyframes scale-up-horizontal-center{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}
+    }
     
     .title{
         height: 280px;
     }
     .title__bio{
-        font-size: 2.6rem;
+        font-size: 2.1rem;
     }
     .title__profile{
         width: 300px;
@@ -620,6 +714,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
 
     /*Sección sobre mi*/
+    .about__title:first-child{
+        text-align: center;
+    }
     .about__title{
         font-size: 1.6rem;
     }
@@ -631,11 +728,18 @@ Utiliza las referencias de los breakpoints @media abajo */
     /*Skills*/
     section.skills{
         margin: 0;
+        height: 500px;
     }
     .skills__title{
         font-size: 1.6rem;
     }
+    .skills__title::before{
+        width: 68px;
+    }
     .skills__line{
+        height: 300px;
+        align-items: center;
+        gap: 25px;
         flex-wrap: nowrap;
         justify-content: space-around;
     }
@@ -681,6 +785,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     .academic__title{
         font-size: 1.6rem;
     }
+    .academic__title::before{
+        width: 289px;
+    }
     .acedemic__container{
         display: flex;
         flex-direction: column;
@@ -715,10 +822,12 @@ Utiliza las referencias de los breakpoints @media abajo */
         flex-direction: row-reverse;
     }
     /*Contacto*/
+    .formcontato__form{
+        width: 50%;
+    }
     .formcontato__contacto{
         display: flex;
         gap: 25px;
-        height: 800px;
         align-items: center;
         justify-content: center;
     }
