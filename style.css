@@ -207,7 +207,7 @@ section.skills{
     content: "";
     position: absolute;
     bottom: -13px;
-    width: 60px;
+    width: 58px;
     height: 3px;
     background-color: var(--color-azul);
 }
@@ -264,7 +264,7 @@ section.hobbies{
     content: "";
     position: absolute;
     bottom: -13px;
-    width: 109px;
+    width: 95px;
     height: 3px;
     background-color: var(--color-azul);
 }
@@ -734,7 +734,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         font-size: 1.6rem;
     }
     .skills__title::before{
-        width: 68px;
+        width: 65px;
     }
     .skills__line{
         height: 300px;
@@ -761,6 +761,9 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
     .hobbies__title{
         font-size: 1.6rem;
+    }
+    .hobbies__title::before{
+    width: 107px;
     }
     .hobbies__line{
         flex-wrap: nowrap;
